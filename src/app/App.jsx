@@ -5,23 +5,33 @@ import './style/App.css'
 
 function App() {
   const dispatch = useDispatch()
-  
+
   const { count } = useSelector((state) => state.counterReducer)
 
   return (
-    <>
 
-      <li>{count}</li>
-      <button onClick={() => dispatch({type:"INC"})}> +</button>
+    <div className="header">
 
-      <section >
-        <div className="container">
-          <Input  dispatch={dispatch} />
+
+      <div className="container">
+        <div className="countBox">
+          <h2>{count}</h2>
+          <button onClick={() => dispatch({ type: "INC" })}> +</button>
+
         </div>
-      </section>
 
 
-    </>
+        <section >
+          <div className="container">
+            <Input dispatch={dispatch} />
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+
+
   )
 }
 

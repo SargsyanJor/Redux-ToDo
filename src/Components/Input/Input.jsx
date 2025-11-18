@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { ToDo } from "../ToDo/ToDo"
 
+import "./Input.css"
 
 export const Input = ({ dispatch }) => {
 
