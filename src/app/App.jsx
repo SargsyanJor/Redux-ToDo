@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Input } from '../Components/Input/Input'
 
 import './style/App.css'
+import { incAC } from '../store/counterReducer'
 
 function App() {
   const dispatch = useDispatch()
@@ -16,7 +17,7 @@ function App() {
       <div className="container">
         <div className="countBox">
           <h2>{count}</h2>
-          <button onClick={() => dispatch({ type: "INC" })}> +</button>
+          <button onClick={() => dispatch(incAC())}> +</button>
 
         </div>
 

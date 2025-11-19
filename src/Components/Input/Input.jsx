@@ -1,14 +1,19 @@
 import { useSelector } from "react-redux"
 import { ToDo } from "../ToDo/ToDo"
+import { useEffect } from "react"
+import { API } from "../../api/api."
+import { addAC, changeTextAC } from "../../store/todeReducer"
+
 
 import "./Input.css"
 
 export const Input = ({ dispatch }) => {
-
-
     const { text, todos } = useSelector((state) => state.todoReducer)
 
-    
+    useEffect(() => {
+        API.getTodos(dispatch)
+    }, [])
+
 
     return (
         <div className='section'>
@@ -18,10 +23,10 @@ export const Input = ({ dispatch }) => {
                     className='addInput'
                     placeholder="Write a task..."
                     value={text}
-                    onChange={(e) => dispatch({ type: "changeText", payload: e.target.value })} />
+                    onChange={(e) => dispatch(changeTextAC(e.target.value))} />
                 <button
                     className='addBTN'
-                    onClick={() => dispatch({ type: "add" })}>+</button>
+                    onClick={() => dispatch(addAC())}>+</button>
             </div>
 
 

@@ -10,9 +10,9 @@
   gap: 25px;
 }
 
-.sectionInput  {
-    display: flex;
-    gap: 20px;
+.sectionInput {
+  display: flex;
+  gap: 20px;
 }
 
 .addInput {
@@ -27,7 +27,7 @@
 }
 
 .addBTN {
- padding: 12px 16px;
+  padding: 12px 16px;
   border-radius: 6px;
   font-size: 16px;
   border: none;
@@ -37,9 +37,8 @@
   cursor: pointer;
 }
 
-
 .sectionTodos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

@@ -17,3 +17,7 @@
     cursor: pointer;
 }
 
+
+.todoLi {
+  font-size: 15px;
+}
